@@ -11,5 +11,5 @@ This has not been tested with all Quectel cell modules and is considered a proof
 
 **This probes URLs like:**
 
-  https://<bucket>.s3.us-east-1.amazonaws.com/<object>.<ext>
+  https://{bucket}.s3.us-east-1.amazonaws.com/<object>.<ext>
 
