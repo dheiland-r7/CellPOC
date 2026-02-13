@@ -13,8 +13,12 @@
 #                                          #
 # tested on Quectel Cellular modules       #
 #                                          #
-#          Deral Heiland 2025              #
-# Code was created with assistance from AI #
+#     Deral (Percent_x) Heiland - Rapid7   #
+#                 ---                      #
+#            Carlota Bindner               #
+#                                          #
+#          Copywrite 2025, 2026            #
+#         CatSocks Version 0.01            #
 ############################################
 
 import serial
