@@ -19,7 +19,7 @@
 #       tested on Quectel Cellular modules.        #
 #                                                  #
 #              Deral Heiland 2025                  #
-#   Code was created with assistance from AI       #
+#                                                  #
 ####################################################
 
 import serial
