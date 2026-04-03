@@ -4,7 +4,7 @@ CatSocks.py is a socks5 proxy written in Python and designed to leverage Quectel
 
 This has not been tested with all Quectel cell modules and is considered a proof of concept tool and should be used with caution
 
-This proxy currently will only allow a single socket conection, so using to establish application access which may require multople socks to work properly will fail. Future version of the POC will be written to support sockets connections up to the Quectel module limit of 12 sockets.
+The orginal version CatSocks.py currently will only allow a single socket conection, so using to establish application access which may require multople socks to work properly will fail. Future version of the POC will be written to support sockets connections up to the Quectel module limit of 12 sockets.
 
 The newer version CatSocks-V0.06.03.py support multisockets (12).
 Note: because of typical UART serial bottlenecks its recommended that application sending data through the proxy meter their socket connection to 3 parallel sockets for best performance
