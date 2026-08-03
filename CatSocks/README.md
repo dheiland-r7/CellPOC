@@ -16,10 +16,8 @@ used by an embedded CPU when it accesses a cellular modem. Rather than
 emulating a network stack, CatSocks intentionally routes traffic through
 the target device's existing inter-chip communications channel
 (typically USB CDC ACM or UART using AT commands). This allows
-researchers to evaluate the complete networking ecosystem---including
-modem firmware, socket handling, DNS resolution, carrier behavior, and
-application interactions---exactly as the embedded device experiences
-them.
+researchers to evaluate the complete networking ecosystem.
+
 
 Because CatSocks operates through a hardware modem's AT command
 interface, users should expect hardware-specific constraints including:
