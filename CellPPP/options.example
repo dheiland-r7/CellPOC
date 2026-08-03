@@ -1,0 +1,37 @@
+# Example /etc/ppp/options for a cellular USB modem on macOS.
+# Copy to /etc/ppp/options (or pass with --options-file) and edit the
+# device, baud, and credentials for your setup.
+
+# Serial device and speed. Find yours with:  ls /dev/tty.usbserial* /dev/tty.usbmodem*
+/dev/tty.usbserial-XXXXXXXX
+115200
+
+# UART port config
+crtscts             # hardware flow control -- drop this if your wiring has no RTS/CTS
+modem               # use modem control lines (DCD)
+lock                # lock the serial device so nothing else grabs it
+#local              # uncomment instead of 'modem' if your adapter has no DCD
+
+# Authentication and DNS
+# Many carriers ignore auth entirely -- try 'noauth' first. Others want
+# whatever dummy user/password your APN docs list.
+#noauth
+user "your-apn-username"
+password "your-apn-password"
+usepeerdns          # take DNS servers from the carrier
+
+# Logging and debug
+nodetach            # stay in the foreground (required when a script supervises pppd)
+dump                # print the options in effect at startup
+#debug              # uncomment for verbose LCP/IPCP negotiation logs
+
+# Networking
+defaultroute        # route traffic through the cellular link
+noipdefault         # take the IP address the network assigns
+asyncmap 0          # don't escape control chars -- fine on 8-bit clean cellular links
+noaccomp            # some carriers choke on address/control compression
+nopcomp             # ...and on protocol field compression
+novj                # VJ header compression is usually rejected on cellular
+
+# Retry behavior
+persist             # redial after the link drops

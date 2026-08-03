@@ -1,0 +1,10 @@
+"""Quectel-specific CatSocks driver configuration."""
+
+SOCKET_IDS = tuple(range(10))
+MAX_PARALLEL_OPENS = 2
+TCP_WRITE_CHUNK = 1024
+UDP_MAX_PAYLOAD = 1024
+PROMPT_TIMEOUT = 5.0
+ACK_TIMEOUT = 8.0
+OPEN_TIMEOUT = 12.0
+COMMAND_TIMEOUT = 12.0
